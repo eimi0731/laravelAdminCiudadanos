@@ -1,9 +1,6 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
 //agregamos lo siguiente
 use App\Http\Controllers\Controller;
 use App\Models\Personas;
@@ -11,10 +8,9 @@ use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Arr;
-
 class PersonaController extends Controller
 {
-    function __construct()
+        function __construct()
     {
          $this->middleware('permission:ver-Ciudadano|crear-Ciudadano|editar-Ciudadano|borrar-Ciudadano')->only('index');
          $this->middleware('permission:crear-Ciudadano', ['only' => ['create','store']]);
@@ -36,10 +32,8 @@ class PersonaController extends Controller
         //Con paginación
         $persona = Personas::paginate(5);
         return view('personas.index',compact('persona'));
-
         //al usar esta paginacion, recordar poner en el el index.blade.php este codigo  {!! $usuarios->links() !!}
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -51,7 +45,6 @@ class PersonaController extends Controller
         $roles = Role::pluck('name','name')->all();
         return view('personas.crear',compact('roles'));
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -76,14 +69,10 @@ class PersonaController extends Controller
         ]);
     
         $input = $request->all();
-        $persona = Personas::create($input);
-    
-        
+        $persona = Personas::create($input);           
         $persona = Personas::paginate(5);
-        return view('personas.index',compact('persona'));
-        
+        return view('personas.index',compact('persona'));        
     }
-
     /**
      * Display the specified resource.
      *
