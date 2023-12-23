@@ -1,0 +1,62 @@
+body{
+    background-image: url(../img/ciudadanos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.formulario{
+    background:#fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow:0 0 30PX rgba(0, 0, 0, 568)
+}
+.form-control{
+background-color: rgb(255, 255, 255);
+}
+.ingresar{
+    background-color: #b80d0dcf;
+    color: #fffcfc;
+    font-family:Tahoma;
+    padding:10px;
+    font-size: 18px;
+    font-weight: 700!important;
+    box-shadow:0 0 30PX rgba(0, 0, 0, 456);
+    border-bottom: 100%;
+    border-color: white;
+    height: 44px;
+
+}
+.olvide{
+    color: rgb(15, 56, 202);
+    text-decoration-style: none;
+    text-decoration-line: none;
+    cursor: pointer;
+}
+.olvide:hover{
+    color: white;
+}
+
+.olvide1{
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500!important;
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    background: #c70e0ec9;
+}
+
+.formulario2{
+    background:rgba(187, 32, 32, 0.563);
+    border-radius: 10px;
+    box-shadow:0 0 30PX rgba(0, 0, 0, 568);
+    height: 600px;
+margin-top: -100px;
+width: auto;
+
+}
+.navbar navbar-expand-md navbar-light bg-white shadow-sm{
+    background:rgba(187, 32, 32, 0.563);
+}

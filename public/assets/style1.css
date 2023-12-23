@@ -1,0 +1,724 @@
+/* Estilos footer */
+.footerWeb {
+    position: relative;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ee0c1c;
+    font-family: "Montserrat", sans-serif;
+  }
+  .footerWeb__topSpace {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 7%;
+    background: #fff;
+    z-index: 0;
+  }
+  .footerWeb__container {
+    position: relative;
+    width: 85%;
+    margin: 30px auto 0;
+    background-color: #fff;
+    padding: 3% 5%;
+    border: 1px solid #e7e7e7;
+    z-index: 1;
+    box-sizing: border-box;
+  }
+  .footerWeb__wrapperCol {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 20px;
+  }
+  .footerWeb__wrapperCol--gap {
+    margin-top: 20px;
+  }
+  .footerWeb__title {
+    font-size: 16px;
+    margin: 0 0 5px 0;
+    font-weight: bold;
+    color: #ee0c1c;
+  }
+  .footerWeb__p {
+    margin: 0;
+    color: #5c5c5c;
+    font-size: 13px;
+    line-height: 22px;
+    text-align: start;
+    font-family: "Work Sans", sans-serif;
+  }
+  .footerWeb__p--social {
+    line-height: normal;
+  }
+  .footerWeb__figure {
+    margin: 0;
+    padding: 0;
+    justify-self: start;
+  }
+  .footerWeb__img {
+    width: 145px;
+    /* height: 50px; */
+  }
+  .footerWeb__img:last-child {
+    margin-left: 15px;
+  }
+  .footerWeb__a {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    color: #5c5c5c;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.5s;
+  }
+  .footerWeb__a:hover {
+    font-weight: bold;
+  }
+  .footerWeb__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background: #ee0c1c;
+    color: #fff;
+    transition: 0.5s;
+    vertical-align: middle;
+  }
+  .footerWeb__icon:hover {
+    background: #fff;
+    color: #ee0c1c;
+    border-color: #ee0c1c;
+  }
+  .footerWeb__text {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .footerWeb__flex {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footerWeb__option {
+    position: relative;
+    padding: 0;
+    border: none;
+    outline: none;
+    min-width: max-content;
+    border-radius: 0px;
+    background-color: #fff;
+    font-family: "Work Sans", sans-serif;
+    font-size: 13px;
+    color: #5c5c5c;
+    font-weight: bold;
+    text-align: start;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .footerWeb__option:hover {
+    background-color: #ee0c1c;
+    color: #fff;
+  }
+  .footerWeb__option:hover .footerWeb__ul {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+  }
+  .footerWeb__ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    width: max-content;
+    height: max-content;
+    margin: 0;
+    padding: 10px 8px;
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footerWeb__ul:hover {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+  }
+  .footerWeb__li {
+    display: block;
+    width: 100%;
+  }
+  .footerWeb__li a {
+    display: block;
+    width: 100%;
+    font-weight: normal;
+  }
+  .footerWeb__firma {
+    width: 85%;
+    margin: 10px auto;
+    font-size: 13px;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .footerWeb__empresaImg {
+    width: 55px;
+  }
+  .footerWeb__p--size {
+    color: inherit;
+  }
+  .footerWeb__gov {
+    width: 100%;
+    background-color: #1d59c9;
+    height: 96px;
+    display: flex;
+  }
+  .footerWeb__govImages {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .footerWeb__govImg {
+    width: 60px;
+  }
+  .footerWeb__govImg--width {
+    width: 197px;
+  }
+  .footerWeb__line {
+    width: 2px;
+    height: 66px;
+    display: inline-block;
+    background: #fff;
+  }
+  
+  @media (min-width: 930px) {
+    .footerWeb__container {
+      width: 85%;
+      margin: 30px auto 0;
+      padding: 75px 60px;
+    }
+    .footerWeb__wrapperCol {
+      grid-template-columns: 60% 40%;
+      gap: 0;
+    }
+    .footerWeb__wrapperCol--gap {
+      grid-template-columns: repeat(2, auto);
+      row-gap: 15px;
+      margin-top: 40px;
+    }
+    .footerWeb__figure {
+      margin: 0;
+      padding: 0;
+      justify-self: end;
+    }
+    .footerWeb__text {
+      width: 60%;
+      margin-top: 30px;
+    }
+    .footerWeb__flex {
+      width: 80%;
+      margin-top: 40px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: row;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .footerWeb__firma {
+      width: 85%;
+    }
+    .footerWeb__govImages {
+      width: 85%;
+    }
+  }
+  @media (min-width: 1251px) {
+    .footerWeb__container {
+      width: 1140px;
+      max-width: 1140px;
+    }
+    .footerWeb__firma {
+      width: 1140px;
+      max-width: 1140px;
+    }
+    .footerWeb__govImages {
+      width: 1140px;
+      max-width: 1140px;
+    }
+  }
+  /* Estilos footer */
+
+
+
+/* Cards Participa */
+
+.cardsParticipa {
+  width: 100%;
+  max-width: 1140px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cardsParticipa__figure {
+  position: relative;
+  width: 100%;
+  height: 242px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.cardsParticipa__img {
+  width: 100%;
+  height: 100%;
+}
+
+.cardsParticipa__a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 2;
+}
+
+.cardsParticipa__a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 25%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+
+.cardsParticipa__a:hover::after {
+  height: 100%;
+}
+
+.cardsParticipa__txt {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 120px;
+  height: 40px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.cardsParticipa__a:hover .cardsParticipa__txt {
+  top: calc(50% - 20px);
+}
+
+@media (min-width: 930px) {
+  .cardsParticipa {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .cardsParticipa__figure {
+    width: 250px;
+    height: 185px;
+  }
+
+  .cardsParticipa__txt {
+    width: 260px;
+  }
+}
+/* Estilos footer */
+.footerWeb {
+    position: relative;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ee0c1c;
+    font-family: "Montserrat", sans-serif;
+  }
+  .footerWeb__topSpace {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 7%;
+    background: #fff;
+    z-index: 0;
+  }
+  .footerWeb__container {
+    position: relative;
+    width: 85%;
+    margin: 30px auto 0;
+    background-color: #fff;
+    padding: 3% 5%;
+    border: 1px solid #e7e7e7;
+    z-index: 1;
+    box-sizing: border-box;
+  }
+  .footerWeb__wrapperCol {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 20px;
+  }
+  .footerWeb__wrapperCol--gap {
+    margin-top: 20px;
+  }
+  .footerWeb__title {
+    font-size: 16px;
+    margin: 0 0 5px 0;
+    font-weight: bold;
+    color: #ee0c1c;
+  }
+  .footerWeb__p {
+    margin: 0;
+    color: #5c5c5c;
+    font-size: 13px;
+    line-height: 22px;
+    text-align: start;
+    font-family: "Work Sans", sans-serif;
+  }
+  .footerWeb__p--social {
+    line-height: normal;
+  }
+  .footerWeb__figure {
+    margin: 0;
+    padding: 0;
+    justify-self: start;
+  }
+  .footerWeb__img {
+    width: 145px;
+    /* height: 50px; */
+  }
+  .footerWeb__img:last-child {
+    margin-left: 15px;
+  }
+  .footerWeb__a {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    color: #5c5c5c;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.5s;
+  }
+  .footerWeb__a:hover {
+    font-weight: bold;
+  }
+  .footerWeb__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background: #ee0c1c;
+    color: #fff;
+    transition: 0.5s;
+    vertical-align: middle;
+  }
+  .footerWeb__icon:hover {
+    background: #fff;
+    color: #ee0c1c;
+    border-color: #ee0c1c;
+  }
+  .footerWeb__text {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .footerWeb__flex {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footerWeb__option {
+    position: relative;
+    padding: 0;
+    border: none;
+    outline: none;
+    min-width: max-content;
+    border-radius: 0px;
+    background-color: #fff;
+    font-family: "Work Sans", sans-serif;
+    font-size: 13px;
+    color: #5c5c5c;
+    font-weight: bold;
+    text-align: start;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .footerWeb__option:hover {
+    background-color: #ee0c1c;
+    color: #fff;
+  }
+  .footerWeb__option:hover .footerWeb__ul {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+  }
+  .footerWeb__ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    width: max-content;
+    height: max-content;
+    margin: 0;
+    padding: 10px 8px;
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footerWeb__ul:hover {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+  }
+  .footerWeb__li {
+    display: block;
+    width: 100%;
+  }
+  .footerWeb__li a {
+    display: block;
+    width: 100%;
+    font-weight: normal;
+  }
+  .footerWeb__firma {
+    width: 85%;
+    margin: 10px auto;
+    font-size: 13px;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .footerWeb__empresaImg {
+    width: 55px;
+  }
+  .footerWeb__p--size {
+    color: inherit;
+  }
+  .footerWeb__gov {
+    width: 100%;
+    background-color: #1d59c9;
+    height: 96px;
+    display: flex;
+  }
+  .footerWeb__govImages {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .footerWeb__govImg {
+    width: 60px;
+  }
+  .footerWeb__govImg--width {
+    width: 197px;
+  }
+  .footerWeb__line {
+    width: 2px;
+    height: 66px;
+    display: inline-block;
+    background: #fff;
+  }
+  
+  @media (min-width: 930px) {
+    .footerWeb__container {
+      width: 85%;
+      margin: 30px auto 0;
+      padding: 75px 60px;
+    }
+    .footerWeb__wrapperCol {
+      grid-template-columns: 60% 40%;
+      gap: 0;
+    }
+    .footerWeb__wrapperCol--gap {
+      grid-template-columns: repeat(2, auto);
+      row-gap: 15px;
+      margin-top: 40px;
+    }
+    .footerWeb__figure {
+      margin: 0;
+      padding: 0;
+      justify-self: end;
+    }
+    .footerWeb__text {
+      width: 60%;
+      margin-top: 30px;
+    }
+    .footerWeb__flex {
+      width: 80%;
+      margin-top: 40px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: row;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .footerWeb__firma {
+      width: 85%;
+    }
+    .footerWeb__govImages {
+      width: 85%;
+    }
+  }
+  @media (min-width: 1251px) {
+    .footerWeb__container {
+      width: 1140px;
+      max-width: 1140px;
+    }
+    .footerWeb__firma {
+      width: 1140px;
+      max-width: 1140px;
+    }
+    .footerWeb__govImages {
+      width: 1140px;
+      max-width: 1140px;
+    }
+  }
+  /* Estilos footer */
+
+
+
+/* Cards Participa */
+
+.cardsParticipa {
+  width: 100%;
+  max-width: 1140px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cardsParticipa__figure {
+  position: relative;
+  width: 100%;
+  height: 242px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.cardsParticipa__img {
+  width: 100%;
+  height: 100%;
+}
+
+.cardsParticipa__a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 2;
+}
+
+.cardsParticipa__a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 25%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+
+.cardsParticipa__a:hover::after {
+  height: 100%;
+}
+
+.cardsParticipa__txt {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 120px;
+  height: 40px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.cardsParticipa__a:hover .cardsParticipa__txt {
+  top: calc(50% - 20px);
+}
+
+@media (min-width: 930px) {
+  .cardsParticipa {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .cardsParticipa__figure {
+    width: 250px;
+    height: 185px;
+  }
+
+  .cardsParticipa__txt {
+    width: 260px;
+  }
+}
