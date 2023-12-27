@@ -1,5 +1,6 @@
 <?php
 namespace App\Http\Controllers;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 //agregamos lo siguiente
 use App\Http\Controllers\Controller;
@@ -39,6 +40,19 @@ class PersonaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function pdf()
+    {
+      
+    $persona = Personas::all();
+    $pdf = PDF:: loadHTML(('<h1>hola</h1>')); 
+    return $pdf->stream();   
+    
+    // $pdf =Pdf::loadView('personas.pdf',compact('Personas'));
+    // return $pdf->stream();
+    
+
+    }
+
     public function create()
     {
         //aqui trabajamos con name de las tablas de users
@@ -55,12 +69,14 @@ class PersonaController extends Controller
     {
         $this->validate($request, [
             'identificacion' => 'required',
-            'fecha_nacimiento' => 'required',
-            'nombres' => 'required',
-            'apellidos' => 'required',
+            'apellido1' => 'required',
+            'apellido2' => 'required',
+            'nombre1'  => 'required',
+            'nombre2' => 'required',
             'sexo' => 'required',
-            'genero'=> 'required',
-            'grupo_sanguineo'=> 'required',
+            'fecha_nacimiento' => 'required',
+            'grupo_sanguineo'=> 'required',          
+            'genero'=> 'required',            
             'etnia'=> 'required',
             'poblacion_especial'=> 'required',
             'telefono'=> 'required',
@@ -79,7 +95,7 @@ class PersonaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function validacion()
     {
         //
     }
@@ -110,12 +126,14 @@ class PersonaController extends Controller
     {
         $this->validate($request, [
             'identificacion' => 'required',
-            'fecha_nacimiento' => 'required',
-            'nombres' => 'required',
-            'apellidos' => 'required',
+            'apellido1' => 'required',
+            'apellido2'=> 'required',
+            'nombre1' => 'required',
+            'nombre2',
             'sexo' => 'required',
-            'genero'=> 'required',
-            'grupo_sanguineo'=> 'required',
+            'fecha_nacimiento' => 'required',
+            'grupo_sanguineo'=> 'required',          
+            'genero'=> 'required',            
             'etnia'=> 'required',
             'poblacion_especial'=> 'required',
             'telefono'=> 'required',
@@ -132,9 +150,9 @@ class PersonaController extends Controller
     
         $persona = Personas::find($id);
         $persona->update($input);
-        DB::table('barrio')->where('barrio_id',$id)->delete();
+        // DB::table('persona')->where('barrio_id',$id)->delete();
     
-        $persona->assignRole($request->input('roles'));
+        // $persona->assignRole($request->input('roles'));
     
         return redirect()->route('personas.index');
     }

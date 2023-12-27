@@ -16,18 +16,23 @@
                         @can('crear-persona')
                         <a class="btn btn-warning" href="{{ route('personas.create') }}">Nuevo</a>
                         @endcan
+                        @can('Exportar-persona')
+                        <a class="btn btn-warning" href="{{ route('personas.pdf') }}">Exportar Registros</a>
+                        @endcan
             <div class="table-responsive">
                         <table class="table table-striped mt-2">
                                 <thead style="background-color:#c53b3b">                                     
                                     <th style="display: none;">ID</th>
                                     <th style="color:#fff;">ID</th>
                                     <th style="color:#fff;">Identificacón</th>
+                                    <th style="color:#fff;">Primer Apellido</th>
+                                    <th style="color:#fff;">Segundo Apellido</th>
+                                    <th style="color:#fff;">Primer Nombre</th>  
+                                    <th style="color:#fff;">Segundo Nombre</th>  
+                                    <th style="color:#fff;">Sexo</th> 
                                     <th style="color:#fff;">Fecha de Nacimiento</th>
-                                    <th style="color:#fff;">Nombres</th>                                    
-                                    <th style="color:#fff;">Apellidos</th>
-                                    <th style="color:#fff;">Sexo</th>   
+                                    <th style="color:#fff;">Grupo Sanguineo</th>                           
                                     <th style="color:#fff;">Genero</th> 
-                                    <th style="color:#fff;">Grupo Sanguineo</th>
                                     <th style="color:#fff;">Etnia</th> 
                                     <th style="color:#fff;">Población Especial</th> 
                                     <th style="color:#fff;">Teléfono</th> 
@@ -42,12 +47,14 @@
                                 <td style="display: none;">{{ $personas->id }}</td>                                
                                 <td>{{ $personas->id }}</td>
                                 <td>{{ $personas->identificacion}}</td>
-                                <td>{{ $personas->fecha_nacimiento}}</td>
-                                <td>{{ $personas->nombres}}</td>
-                                <td>{{ $personas->apellidos}}</td>
+                                <td>{{ $personas->apellido1}}</td>
+                                <td>{{ $personas->apellido2}}</td>
+                                <td>{{ $personas->nombre1}}</td>
+                                <td>{{ $personas->nombre2}}</td>
                                 <td>{{ $personas->sexo}}</td>
+                                <td>{{ $personas->fecha_nacimiento}}</td>
+                                <td>{{ $personas->grupo_sanguineo}}</td>                             
                                 <td>{{ $personas->genero}}</td>
-                                <td>{{ $personas->grupo_sanguineo}}</td>
                                 <td>{{ $personas->etnia}}</td>
                                 <td>{{ $personas->poblacion_especial}}</td>
                                 <td>{{ $personas->telefono}}</td>

@@ -16,14 +16,16 @@ return new class extends Migration
         Schema::create('personas', function (Blueprint $table) {
             $table->id();
             $table->string('identificacion')->nullable();
+            $table->string('apellido1')->nullable();
+            $table->string('apellido2')->nullable();
+            $table->string('nombre1')->nullable();
+            $table->string('nombre2')->nullable();
+            $table->enum('sexo',['F','M'])->nullable();
             $table->date('fecha_nacimiento')->nullable();
-            $table->string('nombres')->nullable();
-            $table->string('apellidos')->nullable();
-            $table->enum('sexo',['F' , 'M']);
-            $table->enum('genero',['Mujer', 'Hombre','LGBTI']);
-            $table->enum('grupo_sanguineo',['O+', 'O-','B+','B-', 'A-','A+','AB+', 'AB-']);
-            $table->enum('etnia',['Afrodescendiente', 'Indigena','Mestizo','Otros_grupos',]);
-            $table->enum('poblacion_especial',['Discapacidad', 'Red_Unidos','Victima','Ninguna']);
+            $table->string('grupo_sanguineo')->nullable();
+            $table->enum('genero',['Mujer','Hombre','LGBTI'])->nullable();            
+            $table->enum('etnia',['Afrodescendiente','Indigena','Mestizo','Otros_grupos',])->nullable();
+            $table->enum('poblacion_especial',['Red_unidos','Discapacidad','Victimas','Ninguno',])->nullable();
             $table->string('telefono')->nullable();
             $table->string('entidad')->nullable();
             $table->string('direccion')->nullable();

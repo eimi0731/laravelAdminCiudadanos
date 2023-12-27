@@ -33,20 +33,26 @@
               </div>
               <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                  <label for="name">Fecha de Nacimiento</label>
-                  {!! Form::date('fecha_nacimiento', null, array('class' => 'form-control')) !!}
+                  <label for="name">Primer Apellido</label>
+                  {!! Form::text('apellido1', null, array('class' => 'form-control')) !!}
                 </div>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                  <label for="name">Nombre</label>
-                  {!! Form::text('nombres', null, array('class' => 'form-control')) !!}
+                  <label for="name">Segundo Apellido</label>
+                  {!! Form::text('apellido2', null, array('class' => 'form-control')) !!}
                 </div>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                  <label for="name">Apellidos</label>
-                  {!! Form::text('apellidos', null, array('class' => 'form-control')) !!}
+                  <label for="name">Primer Nombre</label>
+                  {!! Form::text('nombre1', null, array('class' => 'form-control')) !!}
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                  <label for="name">Segundo Nombre</label>
+                  {!! Form::text('nombre2', null, array('class' => 'form-control')) !!}
                 </div>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-12">
@@ -57,14 +63,20 @@
               </div>
               <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                  <label for="name">Genero</label>
-                  {!! Form::select('genero', ['Mujer'=> 'Mujer', 'Hombre'=> 'Hombre', 'LGBTI'=> 'LGBTI'],null, ['class' => 'form-control']) !!}
+                  <label for="name">Fecha de Nacimiento</label>
+                  {!! Form::date('fecha_nacimiento', null, array('class' => 'form-control')) !!}
                 </div>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                   <label for="password">Grupo Sanguineo</label>
-                  {!! Form::select('grupo_sanguineo', ['O+','O-','AB+','AB-','AB+','A+','A-'],null, ['class' => 'form-control']) !!}
+                  {!! Form::text('grupo_sanguineo', null, array('class' => 'form-control')) !!}
+                </div>
+              </div>             
+              <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                  <label for="name">Genero</label>
+                  {!! Form::select('genero', ['Mujer'=> 'Mujer', 'Hombre'=> 'Hombre', 'LGBTI'=> 'LGBTI'],null, ['class' => 'form-control']) !!}
                 </div>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-12">
@@ -76,7 +88,7 @@
               <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                   <label for="password">Población Especial</label>
-                  {!! Form::select('poblacion_especial', ['Discapacidad'=> 'Discapacidad', 'Red_unidos'=> 'Red Unidos', 'Victima'=> 'Victimas', 'Ninguno'=>'Ninguno'],null, ['class' => 'form-control']) !!}
+                  {!! Form::select('poblacion_especial', ['Discapacidad'=> 'Discapacidad', 'Red_unidos'=> 'Red Unidos', 'Victimas'=> 'Victimas', 'Ninguno'=>'Ninguno'],null, ['class' => 'form-control']) !!}
                 </div>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-12">
