@@ -21,18 +21,21 @@ class PermisosSeeder extends Seeder
             'crear-rol',
             'editar-rol',
             'borrar-rol',
-
             //Operacions sobre tabla Ciudadano
             'ver-Ciudadano',
             'crear-Ciudadano',
             'editar-Ciudadano',
-            'borrar-Ciudadano'
+            'borrar-Ciudadano',
+            //Operacions sobre tabla Ciudadano
+            'ver-usuario',
+            'crear-usuario',
+            'editar-usuario',
+            'borrar-usuario',
         ];
 
-        foreach($permisos as $permiso) {
-            Permission::create(['name'=>$permiso]);
+        foreach ($permisos as $permiso) {
+            Permission::create(['name' => $permiso]);
         }
-
         echo "******** PERMISOS AGREGADOS *************";
     }
 }

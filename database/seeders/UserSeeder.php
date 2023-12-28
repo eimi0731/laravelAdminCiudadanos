@@ -16,8 +16,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        User::create(['name'=>'Super-Administrador', 'email' => 'superadmin@gmail.com', 'password' => Hash::make('12345678')]);
-         
-
+        User::create(['name' => 'Super-Administrador', 'email' => 'superadmin@gmail.com', 'password' => Hash::make('12345678')]);
+        echo "******** USUARIOS AGREGADOS *************";
     }
 }

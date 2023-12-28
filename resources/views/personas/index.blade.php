@@ -13,10 +13,10 @@
                         <div class="card-body">
                 
             
-                        @can('crear-persona')
+                        @can('crear-Ciudadano')
                         <a class="btn btn-warning" href="{{ route('personas.create') }}">Nuevo</a>
                         @endcan
-                        @can('Exportar-persona')
+                        @can('Exportar-Ciudadano')
                         <a class="btn btn-warning" href="{{ route('personas.pdf') }}">Exportar Registros</a>
                         @endcan
             <div class="table-responsive">
@@ -64,13 +64,13 @@
                                 <td>
                                    
                                     <form action="{{ route('personas.destroy',$personas->id) }}" method="POST">                                        
-                                        @can('editar-personas')
+                                        @can('editar-Ciudadano')
                                         <a class="btn btn-info" href="{{ route('personas.edit',$personas->id) }}">Editar</a>
                                         @endcan
 
                                         @csrf
                                         @method('DELETE')
-                                        @can('borrar-personas')
+                                        @can('borrar-Ciudadano')
                                         <button type="submit" class="btn btn-danger">Borrar</button>
                                         @endcan
                                     </form>
