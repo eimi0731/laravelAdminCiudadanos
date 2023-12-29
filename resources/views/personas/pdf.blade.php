@@ -25,10 +25,15 @@
 
 <body>
 
-    <h2>HTML Table</h2>
+<center><h2>REPORTE CIUDADANOS INGRESADOS</h2></center>
     <?php 
 
 ?>
+<h4>EXPORTAR CONTENIDO A EXCEL</h4>
+<a href="{{ route('personas.pdf')}}">Exportar</a>
+<br>
+</br
+
     <table>
         <tr>
             <th>Identificación</th>

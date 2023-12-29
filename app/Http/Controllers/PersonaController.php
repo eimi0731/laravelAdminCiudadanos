@@ -10,7 +10,8 @@ use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Arr;
-
+use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\WithHeadings;
 
 class PersonaController extends Controller
 {
@@ -49,6 +50,8 @@ class PersonaController extends Controller
         $pdf = Pdf::loadView('personas.pdf', compact('persona'));
         return $pdf->stream();
 
+        return Excel::download(new personasExport, 'personas.xlsx');
+
 
     }
 
@@ -69,9 +72,7 @@ class PersonaController extends Controller
         $this->validate($request, [
             'identificacion' => 'required|unique:personas|max:255',
             'apellido1' => 'required',
-            'apellido2' => 'required',
             'nombre1' => 'required',
-            'nombre2' => 'required',
             'sexo' => 'required',
             'fecha_nacimiento' => 'required',
             'grupo_sanguineo' => 'required',

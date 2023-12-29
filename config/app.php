@@ -208,6 +208,7 @@ return [
     | the aliases are "lazy" loaded so they don't hinder performance.
     |
     */
+    Maatwebsite\Excel\ExcelServiceProvider::class,
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,

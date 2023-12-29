@@ -13,15 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tramite', function (Blueprint $table) {
+        Schema::create('entradas', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
-
-            $table->foreignId('id_unidad_administrativa')
-            ->nullable()
-            ->constrained('unidad_administrativa')
-            ->cascadeOnDelete()
-            ->nullOnDelete();
+            $table->string('unidad_administrativa');
+            $table->string('tramite');
+            $table->timestamps();
 
             $table->foreignId('id_personas')
             ->nullable()
@@ -30,7 +26,6 @@ return new class extends Migration
             ->nullOnDelete();
 
         });
-
     }
 
     /**
@@ -40,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tramite');
+        Schema::dropIfExists('entrada');
     }
 };

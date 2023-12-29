@@ -18,4 +18,7 @@
         <i class=" fas fa-blog"></i><span>Ciudadanos</span>
     </a>
     @endcan
+    <a style="background: #c53b3b; color:black;" class="nav-link" href="/entradas">
+        <i class=" fa fa-sign-in" aria-hidden="true"></i><span>Entradas</span>
+    </a>
 </li>

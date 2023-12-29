@@ -64,9 +64,10 @@
               <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                   <label for="name">Fecha de Nacimiento</label>
-                  {!! Form::date('fecha_nacimiento', null, array('class' => 'form-control')) !!}
+                  {!! Form::text('fecha_nacimiento', null, array('class' => 'form-control')) !!}
                 </div>
               </div>
+              
               <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                   <label for="password">Grupo Sanguineo</label>

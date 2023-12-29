@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('nombre1')->nullable();
             $table->string('nombre2')->nullable();
             $table->enum('sexo',['F','M'])->nullable();
-            $table->date('fecha_nacimiento')->nullable();
+            $table->string('fecha_nacimiento')->nullable();
             $table->string('grupo_sanguineo')->nullable();
             $table->enum('genero',['Mujer','Hombre','LGBTI'])->nullable();            
             $table->enum('etnia',['Afrodescendiente','Indigena','Mestizo','Otros_grupos',])->nullable();
