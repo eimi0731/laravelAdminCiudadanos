@@ -22,7 +22,7 @@
 
                 </div>
             </div>
-            <div class="col-7">
+            <div style="background:;" class="col-7">
                 @if (isset($persona) && $persona)
 
                 {!! Form::open(array('url' => 'agregar-entrada','method'=>'POST')) !!}
@@ -39,6 +39,7 @@
                 <div class="input-group-append">
                     <button type="submit" class="btn btn-outline-primary">Agregar Entrada</button>
                 </div>
+                <br>
                 {!! Form::close() !!}
                 @endif
 
@@ -71,7 +72,7 @@
                 <tr>
                     <th scope="col">Tramite</th>
                     <th scope="col">Unidad Administrativa</th>
-                    <th scope="col">Fecha</th>
+                    <th scope="col">Fecha y Hora Ingreso</th>
                     <th </tr>
             </thead>
             @if (isset($entradas))

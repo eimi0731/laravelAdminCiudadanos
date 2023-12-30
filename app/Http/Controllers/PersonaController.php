@@ -49,10 +49,6 @@ class PersonaController extends Controller
         $persona = Personas::all();
         $pdf = Pdf::loadView('personas.pdf', compact('persona'));
         return $pdf->stream();
-
-        return Excel::download(new personasExport, 'personas.xlsx');
-
-
     }
 
     public function create()
@@ -87,7 +83,10 @@ class PersonaController extends Controller
         $input = $request->all();
         $persona = Personas::create($input);
         $persona = Personas::paginate(5);
-        return view('personas.index', compact('persona'));
+
+        // redireccionar aqui
+        return redirect()->to("/entradas?identificacion=" . $request->identificacion);
+        //return view('personas.index', compact('persona'));
     }
     /**
      * Display the specified resource.
@@ -109,8 +108,6 @@ class PersonaController extends Controller
     public function edit($id)
     {
         $persona = Personas::find($id);
-
-
         return view('personas.editar', compact('persona'));
     }
 
@@ -167,5 +164,19 @@ class PersonaController extends Controller
     {
         Personas::find($id)->delete();
         return redirect()->route('personas.index');
+    }
+
+
+    public function getPersonByIdentification(Request $request)
+    {
+        $identification = $request->identification;
+
+        $persona = Personas::where('identificacion', '=', $identification)->first();
+
+        if ($persona) {
+            return response()->json(['success' => true, 'data' => $persona]);
+        } else {
+            return response()->json(['success' => false, 'data' => null]);
+        }
     }
 }

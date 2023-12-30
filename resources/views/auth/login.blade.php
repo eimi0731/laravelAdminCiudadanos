@@ -5,7 +5,7 @@
 @section('content')
 <div class="container">
 <div class="row justify-content-center pt-5 mt-1">
-    <div class="col-md-8 card">
+    <div class="col-md-9 card">
                 <div class="card-header" style="text-align: center; background: #b80d0dcf; color:white"><center><h2>{{ __('Bienvenido al Login') }}</h2></center></div>
                 <img class="img-fluid" src="/img/logo1.png"  style="width: 400px; position:relative; height: 100px; border-radius: 10px;">
                 <div class="card-body">

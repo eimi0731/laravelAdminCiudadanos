@@ -8,11 +8,14 @@ use Illuminate\Http\Request;
 
 class EntradaController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        $identificacion = $request->get("identificacion");
+        $persona = Personas::where('identificacion', '=', $identificacion)->first();
+        //$entradas = [];
+        //$entradas = Entrada::where('id_personas', '=', $persona->id)->orderBy('created_at', 'desc')->get();
 
-        // 1061789552
-        return view("entradas.index");
+        return view('entradas.index', compact("persona"));
     }
 
     /**
@@ -23,7 +26,6 @@ class EntradaController extends Controller
      */
     public function store(Request $request)
     {
-
         $this->validate($request, [
             'tramite' => 'required',
             'unidad_administrativa' => 'required',
@@ -45,7 +47,7 @@ class EntradaController extends Controller
         if ($persona) {
             $entradas = Entrada::where('id_personas', '=', $persona->id)->orderBy('created_at', 'desc')->get();
         } else {
-            if($request->identificacion){
+            if ($request->identificacion) {
                 $errorMessage = "La Persona no se encuentra registrada";
             }
         }

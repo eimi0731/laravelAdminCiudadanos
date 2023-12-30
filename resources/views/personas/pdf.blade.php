@@ -29,11 +29,6 @@
     <?php 
 
 ?>
-<h4>EXPORTAR CONTENIDO A EXCEL</h4>
-<a href="{{ route('personas.pdf')}}">Exportar</a>
-<br>
-</br
-
     <table>
         <tr>
             <th>Identificación</th>
