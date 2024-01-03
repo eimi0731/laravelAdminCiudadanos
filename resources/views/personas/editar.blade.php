@@ -100,7 +100,7 @@
                   {!! Form::text('telefono', null, array('class' => 'form-control')) !!}
                 </div <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                  <label for="password">Entidad o tedendencia</label>
+                  <label for="password">Entidad o Dependencia</label>
                   {!! Form::text('entidad', null, array('class' => 'form-control')) !!}
                 </div>
               </div>

@@ -6,6 +6,7 @@
     <title>@yield('title') | {{ config('app.name') }}</title>
 
     <!-- General CSS Files -->
+    <link rel="icon"  type="image/png" href="/img/escudo.png">
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
 
